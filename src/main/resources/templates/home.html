@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>시작</title>
+        <style>
+            * {
+              margin: 0px;
+              padding: 0px;
+              text-decoration: none;
+              font-family:sans-serif;
+            }
+
+            .box {
+                position:absolute;
+                width:90%;
+                padding: 30px, 20px;
+                background-color:#FFFFFF;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                border-radius: 15px;
+            }
+
+            .center {
+                text-align:center;
+                font-size: 25px;
+            }
+
+            img {
+                width: 25%
+            }
+
+            h3, p {
+                margin-top: 7px;
+            }
+
+            .btn {
+              width: 100%;
+              height:50px;
+              margin-top: 5%;
+              background-color: #F55928;
+              background-size: 200%;
+              color:white;
+              font-size: 25px;
+              font-weight: bold;
+              border:none;
+              cursor:pointer;
+            }
+
+            .login {
+                width: 100%;
+                text-align:center;
+                font-size: 20px;
+            }
+
+            .horizon {
+                display: inline-block;
+                margin-top: 15px;
+            }
+
+            .loginBt {
+                font-size: 20px;
+                color: #F55928;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="center">
+                <img src="/img/cash_logo.png">
+                <h2>Move And Cash</h2>
+                <p>이제 대출 갈아타기도 쉽고 빠르게</p>
+            </div>
+            <button type="button" class="btn" onclick="location.href='/members/new'">시작하기</button>
+            <div class="login">
+                <div class="horizon">이미 계정이 있나요?</div>
+                <a class="loginBt" href="/members/login">로그인</a>
+            </div>
+        </div>
+    </body>
+</html>
