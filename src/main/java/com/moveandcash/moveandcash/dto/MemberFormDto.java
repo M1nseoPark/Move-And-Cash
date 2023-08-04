@@ -1,4 +1,4 @@
-package com.example.moveandcash.dto;
+package com.moveandcash.moveandcash.dto;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -20,12 +20,6 @@ public class MemberFormDto {
     @NotBlank(message = "이름은 필수 입력 값입니다.")
     private String name;
 
-    @NotBlank(message = "필수 입력 값입니다. 인증하기를 통해 토큰을 발급받아 주세요")
-    private String accessToken;
-
-    @NotBlank(message = "필수 입력 값입니다. 인증하기를 통해 토큰을 발급받아 주세요")
-    private String refreshToken;
-
-    @NotBlank(message = "필수 입력 값입니다. 인증하기를 통해 토큰을 발급받아 주세요")
-    private String userSeqno;
+    @NotBlank(message = "핸드폰번호는 필수 입력 값입니다.")
+    private String phone;
 }

@@ -1,10 +1,10 @@
-package com.example.moveandcash;
+package com.moveandcash.moveandcash;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MoveAndCashApplicationTests {
+class MoveandcashApplicationTests {
 
 	@Test
 	void contextLoads() {
