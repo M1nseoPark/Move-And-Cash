@@ -11,10 +11,41 @@
                 font-family:sans-serif;
             }
 
+            .box-1 {
+                position:absolute;
+                width:90%;
+                padding: 30px, 20px;
+                background-color:#FFFFFF;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                border-radius: 15px;
+            }
+
+            .box-2 {
+                border: 1px solid #000000;
+                border-radius: 5px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 30px;
+                margin-bottom: 20px;
+            }
+
+            .num {
+                color: #F55928;
+                font-weight: bold;
+                font-size: 30px;
+            }
+
+            .text {
+                margin-left: 15px;
+                font-size: 24px;
+            }
+
             .btn {
                 width: 100%;
                 height:50px;
-                margin-top: 5%;
+                margin-top: 4%;
                 background-color: #F55928;
                 background-size: 200%;
                 color:white;
@@ -26,12 +57,30 @@
         </style>
     </head>
     <body>
-        <h1>홍길동님, 대출 쉽게 갈아타고 이자 아끼세요</h1>
-        <br>
-        <div>
-            <p>1</p>
-            <p>여러 번 조회해도 신용점수에 아무런 영향이 없어요</p>
+        <div class="box-1">
+            <h1>홍길동님, 대출 쉽게 갈아타고 이자 아끼세요</h1>
+            <br><br><br>
+            <div class="box-2">
+                <span class="num">1</span>
+                <span class="text">여러 번 조회해도 신용점수에 아무런 영향이 없어요</span>
+            </div>
+            <div class="box-2">
+                <span class="num">2</span>
+                <span class="text">내 대출의 금리, 한도, 중도상환수수료를 확인해요</span>
+            </div>
+            <div class="box-2">
+                <span class="num">3</span>
+                <span class="text">갈아탈 대출의 금리(우대금리), 한도를 알려드려요</span>
+            </div>
+            <div class="box-2">
+                <span class="num">4</span>
+                <span class="text">대출 갈아타기는 평일(공휴일 제외) 9시부터 16시까지만 이용할 수 있어요</span>
+            </div>
+            <div class="box-2">
+                <span class="num">5</span>
+                <span class="text">대출 갈아타기는 일 1회만 가능하며, 0시(자정)에는 대출 조회 내역이 초기화돼요</span>
+            </div>
+            <button type="button" class="btn" onclick="location.href='/members/new'">갈아탈 대출 찾기</button>
         </div>
-        <button type="button" class="btn" onclick="location.href='/members/new'">갈아탈 대출 찾기</button>
     </body>
 </html>
