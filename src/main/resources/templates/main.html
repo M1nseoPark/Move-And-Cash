@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="ko">
     <head>
         <meta charset="UTF-8">
         <title>메인</title>
@@ -58,7 +59,7 @@
     </head>
     <body>
         <div class="box-1">
-            <h1>홍길동님, 대출 쉽게 갈아타고 이자 아끼세요</h1>
+            <h1 th:text="${member.name}+'님, 대출 쉽게 갈아타고 이자 아끼세요'"></h1>
             <br><br><br>
             <div class="box-2">
                 <span class="num">1</span>
@@ -80,7 +81,7 @@
                 <span class="num">5</span>
                 <span class="text">대출 갈아타기는 일 1회만 가능하며, 0시(자정)에는 대출 조회 내역이 초기화돼요</span>
             </div>
-            <button type="button" class="btn" onclick="location.href='/members/new'">갈아탈 대출 찾기</button>
+            <button type="button" class="btn" onclick="location.href='/guide'">갈아탈 대출 찾기</button>
         </div>
     </body>
 </html>
