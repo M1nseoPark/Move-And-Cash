@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+                text-decoration: none;
+                font-family:sans-serif;
+            }
+
+            .body {
+                padding-top: 50px;
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            .box-1 {
+                border: 1px solid #000000;
+                border-radius: 5px;
+                padding-left: 20px;
+                margin-top: 30px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            img {
+                float: left;
+                width: 70px;
+                margin-top: 10px;
+                margin-right: 30px;
+            }
+
+            .title {
+                font-size: 22px;
+                font-weight: bold;
+                margin-right: 10px;
+            }
+
+            .content-1 {
+                margin-bottom: 5px;
+            }
+
+            .content-2 {
+                font-size: 22px;
+            }
+
+            input[type=checkbox] {
+                zoom: 3.0;
+            }
+
+            .btn {
+                bottom: 0px;
+                position: sticky;
+                width: 100%;
+                height:50px;
+                margin-top: 4%;
+                background-color: #F55928;
+                background-size: 200%;
+                color:white;
+                font-size: 25px;
+                font-weight: bold;
+                border:none;
+                cursor:pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="body">
+            <h1>더 나은 조건을 찾고 싶은</h1>
+            <h1>대출을 선택해 주세요</h1><br>
+
+            <th:block th:each="item : ${items}">
+                <div class="box-1">
+                    <img th:if="${item.repayOrgCode == 'KBBA'}" src="/img/kb_bank_2.png">
+                    <img th:if="${item.repayOrgCode == 'SINB'}" src="/img/sinhan_bank_2.png">
+                    <img th:if="${item.repayOrgCode == 'URIB'}" src="/img/uri_bank_2.png">
+                    <img th:if="${item.repayOrgCode == 'HANA'}" src="/img/hana_bank_2.png">
+
+                    <div class="box-2">
+                        <h2 class="content-1" th:if="${item.repayOrgCode == 'KBBA'}">KB국민은행</h2>
+                        <h2 class="content-1" th:if="${item.repayOrgCode == 'SINB'}">신한은행</h2>
+                        <h2 class="content-1" th:if="${item.repayOrgCode == 'URIB'}">우리은행</h2>
+                        <h2 class="content-1" th:if="${item.repayOrgCode == 'HANA'}">하나은행</h2>
+
+                        <p class="content-1">
+                            <span class="title">금리</span>
+                            <span class="content-2">[[${item.lastOfferedRate}]]%</span>
+                        </p>
+                        <p class="content-1">
+                            <span class="title">잔액</span>
+                            <span class="content-2">[[${item.balanceAmt}]]천원</span>
+                        </p>
+                    </div>
+
+                    <input type="checkbox"/>
+                </div>
+            </th:block>
+        </div>
+        <button type="button" class="btn" onclick="location.href='/members/new'">선택하기</button>
+    </body>
+</html>
