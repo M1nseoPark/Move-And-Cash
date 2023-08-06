@@ -12,4 +12,5 @@ public class SearchController {
     public String inputForm() {
         return "member/inputForm";
     }
+
 }
